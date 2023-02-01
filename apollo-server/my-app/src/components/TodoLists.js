@@ -9,7 +9,7 @@ const TodoList = () => {
         <label
           className="px-2 py-4, mx-3, text-gray-500 font-thin text-xl focus:outline-none"
         >
-          Ruchika 
+         
         </label>
       </div>
       <div>
