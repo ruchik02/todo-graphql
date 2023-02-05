@@ -7,3 +7,11 @@ export const ADD_TODO=gql`
   }
 }
 `;
+export const DEL_TODO=gql`
+mutation MyMutation($id: bigint!) {
+  delete_getTodos_by_pk(id: $id) {
+    task
+  }
+}
+
+`
