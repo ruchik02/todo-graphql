@@ -5,6 +5,10 @@ const TodoList = (props) => {
     value,
     handleChange,
     handleDelete,
+    isCompleted,
+    handleEdit,
+    handleEditKey,
+    handleBlurSubmit,
   } = props;
 
   return (
@@ -14,9 +18,16 @@ const TodoList = (props) => {
           type="checkbox"
           className="mx-3"
           onChange={handleChange}
+          checked={isCompleted}
         />
         <label
-          className="px-2 py-4, mx-3, text-gray-500 font-thin text-xl focus:outline-none"
+          className={`${
+            isCompleted ? "line-through" : ""
+          } px-2 py-4, mx-3, text-gray-500 font-thin text-xl focus:outline-none `}
+          contentEditable="true"
+          onInput={handleEdit}
+          onKeyDown={handleEditKey}
+          onBlur={handleBlurSubmit}
         >
           {value}
         </label>
