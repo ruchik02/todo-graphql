@@ -1,5 +1,4 @@
 import React from 'react'
-// import TodoApp from './components/TodoApp'
 import Todos from './components/Todo'
 import {
   ApolloClient,
@@ -30,7 +29,6 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <h1 className="text-center text-8xl text-[#e8d4d5] font-thin">todo</h1>
-      {/* <TodoApp/> */}
       <Todos/>
     </ApolloProvider>
   )
